@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing Web dependencies
+      - cd frontend
+      - npm install --silent
+      - echo Finished installing Web dependencies
+  build:
+    commands:
+      - echo Building artifacts
+      - npm run build
+      - npm run deploy-dev
+      - echo Finished building production artifacts
+cache:
+  paths:
+    - "frontend/node_modules/**/*"
+
+artifacts:
+  files:
+    - "**/*"
+  base-directory: "frontend/build*"
+  discard-paths: no
