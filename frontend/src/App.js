@@ -17,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>My Todo List</h1>
         <header className="App-header">
           {this.state.todos.map(todo => (
             <h2>{todo}</h2>
