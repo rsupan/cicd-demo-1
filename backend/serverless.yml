@@ -1,4 +1,4 @@
-service: todoApi
+service: mybackend-todo
 
 provider:
   name: aws

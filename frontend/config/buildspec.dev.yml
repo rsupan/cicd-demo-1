@@ -7,8 +7,6 @@ phases:
     commands:
       - echo Installing Web dependencies
       - cd frontend
-      - echo present working dir
-      - pwd
       - npm install --silent
       - echo Finished installing Web dependencies
   build:
